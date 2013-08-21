@@ -1,6 +1,4 @@
 NAME            = "CTV"
-ART             = "art-default.jpg"
-ICON            = "icon-default.png"
 PLUGIN_PREFIX   = "/video/ctv"
 
 RE_EPISODE_ID = Regex('PlayEpisode\(([0-9]+).+?\)')
@@ -14,11 +12,9 @@ NETWORK = {'title' : 'CTV', 'network' : 'ctv.ca'}
 ####################################################################################################
 def Start():
     ObjectContainer.title1  = NAME
-    ObjectContainer.art     = R(ART)
-    DirectoryObject.thumb   = R(ICON)
 
 ####################################################################################################
-@handler(PLUGIN_PREFIX, NAME, R(ICON), R(ART))
+@handler(PLUGIN_PREFIX, NAME)
 def MainMenu():
     oc = ObjectContainer()
     if Client.Platform in ['MacOSX', 'Windows', 'Linux', 'PlexHomeTheater']:
@@ -78,5 +74,3 @@ def GetFeatured():
         except:
             pass
     return oc
-  
-################################################################################

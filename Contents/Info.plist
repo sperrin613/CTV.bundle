@@ -9,6 +9,8 @@
 	<key>PlexClientPlatforms</key>
 	<string>*</string>
 	<key>PlexPluginRegions</key>
-	<string>CA</string>
+	<array>
+		<string>CA</string>
+	</array>
 </dict>
 </plist>

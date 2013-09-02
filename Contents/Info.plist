@@ -9,7 +9,7 @@
 	<key>PlexClientPlatforms</key>
 	<string>*</string>
 	<key>PlexClientPlatformExclusions</key>
-	<string>MacOSX,Windows,Android</string>
+	<string>MacOSX,Windows,Android,Plex Home Theater</string>
 	<key>PlexPluginRegions</key>
 	<array>
 		<string>CA</string>

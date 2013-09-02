@@ -17,11 +17,6 @@ def Start():
 @handler(PLUGIN_PREFIX, NAME)
 def MainMenu():
     oc = ObjectContainer()
-    if Client.Platform in ['MacOSX', 'Windows', 'Linux', 'PlexHomeTheater']:
-        oc.header = 'Not supported'
-	oc.message = 'This channel is not supported on %s' % (Client.Platform if Client.Platform is not None else 'this client')
-	return oc
-    
     oc.add(DirectoryObject(key=Callback(GetFeatured), title="Featured"))
     oc.add(DirectoryObject(key=Callback(GetVideoLibrary, level=1, url=(URL % NETWORK['network'])+'library/', title2='Video Library'), title="Video Library"))
     return oc
